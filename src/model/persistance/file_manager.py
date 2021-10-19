@@ -18,12 +18,16 @@ class FileManager(FileSystemManager):
 
         return Constants.SYSTEM_CURRENT_DIRECTORY + path 
 
-    def read_file(self) -> str:
-        pass
+    def read_file(self, path, file_name) -> str:
+        path += file_name
+        file = open(path, Constants.FILE_OPTIONS_READ)
+        result = file.read()
+        file.close()
+        return result
 
-    def write_file(self, path, name, body, append_on_end = True) -> str:
+    def write_file(self, path, file_name, body, append_on_end = True) -> str:
        
-        path += name
+        path += file_name
         file = open(path, Constants.FILE_OPTIONS_APPEND) if append_on_end else open(path, Constants.FILE_OPTIONS_WRITE)
         file.write(body)
         file.close()

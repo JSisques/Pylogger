@@ -29,6 +29,7 @@ class Constants:
     #File options
     FILE_OPTIONS_APPEND = "a"
     FILE_OPTIONS_WRITE = "w"
+    FILE_OPTIONS_READ = "r"
 
     #Special sharacters
     SPECIAL_CHAR_ENTER = "\n"
