@@ -19,7 +19,7 @@ class Constants:
 
     #File names
     FILE_NAME_OUTPUT = "output" + EXTENSION_TXT
-    FILE_NAME_LOG = "log" + EXTENSION_LOG
+    FILE_NAME_LOG = "app" + EXTENSION_LOG
 
     #Log messages
     LOG_MESSAGE_PROGRAM_STARTED = "Program started"

@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     directory_manager.create_directory(Constants.PATH_LOG)
     file_manager.create_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG)
-    file_manager.write_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG, logger.write_log(Constants.LOG_MESSAGE_PROGRAM_STARTED))
+    file_manager.write_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG, logger.create_log_message(Constants.LOG_MESSAGE_PROGRAM_STARTED))

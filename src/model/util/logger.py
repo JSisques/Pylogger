@@ -8,7 +8,7 @@ class Logger:
         self.path = path
         self.file_name = file_name
 
-    def write_log(self, body) -> str:
+    def create_log_message(self, body) -> str:
         message = "[" + Constants.SYSTEM_CURRENT_DATETIME + "]"+ " " + body + Constants.SPECIAL_CHAR_ENTER
 
         return message
