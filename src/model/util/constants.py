@@ -6,7 +6,6 @@ class Constants:
     #System
     SYSTEM_SEPARATOR = os.path.sep
     SYSTEM_CURRENT_DIRECTORY = os.getcwd() + SYSTEM_SEPARATOR
-    SYSTEM_CURRENT_DATETIME = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
     #Paths
     PATH_LOG = "log" + SYSTEM_SEPARATOR
