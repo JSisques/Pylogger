@@ -31,6 +31,6 @@ class Constants:
     FILE_OPTIONS_WRITE = "w"
     FILE_OPTIONS_READ = "r"
 
-    #Special sharacters
+    #Special characters
     SPECIAL_CHAR_ENTER = "\n"
     SPECIAL_CHAR_TAB = "\t"
