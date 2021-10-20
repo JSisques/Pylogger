@@ -8,8 +8,8 @@
 ## Usage
 
 ## Roadmap
-- [] Add background process
-- [] Solve bugs
+- [ ] Add background process
+- [ ] Solve bugs
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
