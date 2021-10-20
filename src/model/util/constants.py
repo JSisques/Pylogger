@@ -34,3 +34,6 @@ class Constants:
     #Special characters
     SPECIAL_CHAR_ENTER = "\n"
     SPECIAL_CHAR_TAB = "\t"
+
+    #Kylogger
+    KEYLOGGER_TIMER = 10

